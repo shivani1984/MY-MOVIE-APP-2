@@ -31,11 +31,20 @@ class App extends React.Component{
   };
 
   handleToggleCart = (movie) => {
-    const { movies } = this.state;
+    const { movies} = this.state;
+    let {cartCount} = this.state;
     const mid = movies.indexOf(movie);
     const updatedMovies = [...movies];
     updatedMovies[mid] = { ...updatedMovies[mid], cart: !updatedMovies[mid].cart };
-    this.setState({ movies: updatedMovies });
+    console.log(updatedMovies[mid].cart);
+
+    if(updatedMovies[mid].cart){
+      cartCount = cartCount+1;
+
+    }
+    else {cartCount = cartCount -1;}
+    this.setState({ movies: updatedMovies, cartCount});
+    console.log(cartCount);
   };
 
   handleToggleFav = (movie) => {
@@ -46,10 +55,10 @@ class App extends React.Component{
     this.setState({ movies: updatedMovies });
   };
   render(){
-    const {movies}= this.state ;
+    const {movies, cartCount}= this.state ;
    return (
       <>
-      <NavBar/>
+      <NavBar cartCount ={cartCount}/>
       <MovieList movies ={movies}
                  addStars={this.handleIncStars}
                  removeStars={this.handleDcrStars}
