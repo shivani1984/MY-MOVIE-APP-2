@@ -1,0 +1,32 @@
+export const movies = [
+    {
+      id:1,
+      title: "The Avengers",
+      plot: "Earth's mightiest heroes",
+      price: "Rs 199",
+      rating: 8.9,
+      stars: 0,
+      fav: false,
+      cart: false,
+    },
+    {
+        id:2,
+      title: "Iron Man",
+      plot: "A genius billionaire in a high-tech suit",
+      price: "Rs 150",
+      rating: 7.9,
+      stars: 0,
+      fav: false,
+      cart: false,
+    },
+    {
+      id:3,
+      title: "Black Panther",
+      plot: "The king of Wakanda fights for his people",
+      price: "Rs 180",
+      rating: 8.3,
+      stars: 0,
+      fav: false,
+      cart: false,
+    },
+  ]
