@@ -1,12 +1,12 @@
-import React, {Component} from "react";
+
 import styles from "./NavBar.module.css"
 
 
 
-class NavBar extends Component {
-    render() {
-        console.log(this.props);
-        const{cartCount} = this.props;
+function NavBar(props) {
+    
+        console.log(props);
+        const{cartCount} = props;
         return (
             <>
                 <div className={styles.nav}>
@@ -21,6 +21,6 @@ class NavBar extends Component {
             </>
         );
     }
-}
+
 
 export default NavBar;

@@ -1,8 +1,8 @@
-import { Component } from 'react';
 
-class MovieCard extends Component {
-  render() {
-    const { movie, addStars, removeStars, toggleFav, toggleCart } = this.props; // Change from movies to movie
+
+function MovieCard(props){
+   
+    const { movie, addStars, removeStars, toggleFav, toggleCart } = props; // Change from movies to movie
     const { title, plot, price, rating, stars, fav, cart } = movie; // Change from movies to movie
     
     return (
@@ -61,6 +61,6 @@ class MovieCard extends Component {
       </div>
     );
   }
-}
+
 
 export default MovieCard;
